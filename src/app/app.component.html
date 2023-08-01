@@ -1,0 +1,22 @@
+<div class="navbar" role="banner">
+  <h1>Endicio</h1>
+</div>
+
+<div class="content" role="main">
+  <h2>Endicio Dictionary Browser</h2>
+
+  <div class="word-search">
+    <div class="word-input-box">
+      <input #wordEntered class="input" placeholder="Type your text" required=""
+        type="text" (keyup.enter)="searchWord(wordEntered.value)">
+      <span class="input-border"></span>
+    </div>
+
+    <div class="api-response" id="apiResponseBox">
+      <h3>{{ wordResponseData.word }}</h3>
+      <p>Phonetic: {{wordResponseData.phonetics[0].text}}</p>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
