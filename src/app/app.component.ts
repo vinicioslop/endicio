@@ -56,10 +56,13 @@ export class AppComponent {
       }
     ]
   };
+  audio: string = "";
 
   constructor() { }
 
   async searchWord(word: string) {
+    let apiReponseBox = document.getElementById("apiResponseBox");
+
     const response = await fetch(this.apiUrl + word, {
       method: "GET",
       headers: {
@@ -71,5 +74,16 @@ export class AppComponent {
     const dados = await response.json();
 
     this.wordResponseData = dados[0];
+
+    this.wordResponseData.phonetics.map((phonetic) => {
+      if (phonetic.audio) {
+        this.audio = phonetic.audio;
+      }
+    });
+
+    if(apiReponseBox) {
+      apiReponseBox.className = "api-response show";
+      console.log(this.wordResponseData);
+    }
   }
 }

@@ -3,7 +3,7 @@
 </div>
 
 <div class="content" role="main">
-  <h2>Endicio Dictionary Browser</h2>
+  <h2 class="type-word">Type a word to search</h2>
 
   <div class="word-search">
     <div class="word-input-box">
@@ -13,10 +13,24 @@
     </div>
 
     <div class="api-response" id="apiResponseBox">
-      <h3>{{ wordResponseData.word }}</h3>
-      <p>Phonetic: {{wordResponseData.phonetics[0].text}}</p>
+      <div class="main-data">
+        <h3>{{ wordResponseData.word }}</h3>
+        <p>Phonetic: {{ wordResponseData.phonetic }}</p>
+        <audio controls>
+          <source [src]="audio" type="audio/mpeg" />
+        </audio>
+      </div>
+      <div class="meanings">
+        <div *ngFor="let item of wordResponseData.meanings">
+          <p class="part-of-speach">{{ item.partOfSpeech }}</p>
+          <div class="definitions">
+            <div *ngFor="let definition of item.definitions;">
+              <p class="definition">{{ definition.definition }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
 
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>

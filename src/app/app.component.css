@@ -15,15 +15,15 @@
 .content {
     display: flex;
     flex-direction: column;
-    align-items: center;
 
     padding-left: var(--side-spacing);
     padding-bottom: var(--side-spacing);
 
-    height: 100vh;
     width: 100%;
+}
 
-    /* background-color: #181717; */
+.content .type-word {
+    font-size: 22px;
 }
 
 .word-input-box {
@@ -41,6 +41,36 @@
 
 .show {
     display: flex;
+}
+
+.main-data {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+    width: 90%;
+    height: fit-content;
+}
+
+.meanings > div {
+    margin-bottom: 20px;
+}
+
+.meanings > div .part-of-speach {
+    margin-bottom: 5px;
+
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.meanings > div .definitions {
+    width: 50%;
+}
+
+.meanings > div .definitions .definition {
+    margin-bottom: 2px;
 }
 
 /* CODE FOR INPUT START */
