@@ -22,55 +22,18 @@
     width: 100%;
 }
 
-.content .type-word {
-    font-size: 22px;
-}
-
-.word-input-box {
-    margin-top: 20px;
-}
-
-.api-response {
-    display: none;
-    flex-direction: column;
-
-    margin-top: 20px;
-
-    width: 100%;
-}
-
-.show {
-    display: flex;
-}
-
-.main-data {
+.word-search {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
 
     width: 90%;
-    height: fit-content;
 }
 
-.meanings > div {
-    margin-bottom: 20px;
-}
+.type-word {
+    margin-right: 30px;
 
-.meanings > div .part-of-speach {
-    margin-bottom: 5px;
-
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: capitalize;
-}
-
-.meanings > div .definitions {
-    width: 50%;
-}
-
-.meanings > div .definitions .definition {
-    margin-bottom: 2px;
+    font-size: 22px;
 }
 
 /* CODE FOR INPUT START */
@@ -84,7 +47,6 @@
     width: var(--width-of-input);
 }
 
-/* styling of Input */
 .input {
     color: #000;
     font-size: 16px;
@@ -97,7 +59,6 @@
     border-bottom: var(--border-height) solid var(--border-before-color);
 }
 
-/* styling of animated border */
 .input-border {
     position: absolute;
     background: var(--border-after-color);
@@ -108,7 +69,6 @@
     transition: 0.3s;
 }
 
-/* Hover on Input */
 input:hover {
     background: var(--input-hovered-color);
 }
@@ -117,14 +77,7 @@ input:focus {
     outline: none;
 }
 
-/* here is code of animated border */
 input:focus~.input-border {
     width: 100%;
 }
-
-/* === if you want to do animated border on typing === */
-/* remove input:focus code and uncomment below code */
-/* input:valid ~ .input-border{
-     width: 100%;
-   } */
 /* CODE FOR INPUT FINAL */

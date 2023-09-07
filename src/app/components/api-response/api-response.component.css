@@ -1,0 +1,26 @@
+.api-response {
+    display: none;
+    flex-direction: column;
+
+    margin-top: 20px;
+
+    width: 100%;
+}
+
+.show {
+    display: flex;
+}
+
+.main-data {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+    width: 90%;
+}
+
+.meanings {
+    display: flex;
+    flex-direction: column;
+}

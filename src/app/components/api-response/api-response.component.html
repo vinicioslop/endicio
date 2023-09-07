@@ -1,0 +1,15 @@
+<div class="api-response" id="apiResponseBox">
+    <div class="main-data" id="mainData">
+        <h3>{{ wordResponseData.word }}</h3>
+        <p>Phonetic: {{ phonetic }}</p>
+
+        <audio controls>
+            <source [src]="audioSrc" />
+        </audio>
+    </div>
+
+    <div class="meanings">
+        <app-card class="item" *ngFor="let meaning of wordResponseData.meanings"
+            [meaning]="meaning"></app-card>
+    </div>
+</div>

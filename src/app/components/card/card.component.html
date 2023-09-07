@@ -1,0 +1,28 @@
+<mat-card class="card mat-elevation-z10">
+    <mat-card-header class="header-card">
+        <mat-card-title class="header-title">
+            {{ meaning.partOfSpeech }}
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div *ngFor="let definition of meaning.definitions; index as i;">
+            <p class="definition" *ngIf="i < 3">
+                {{ definition.definition }}
+            </p>
+            <p class="definition" *ngIf="moreDefinitions && i >= 3 ">
+                {{ definition.definition }}
+            </p>
+        </div>
+        <p *ngIf="haveMoreDefinitions" class="more"
+            (click)="seeMoreDefinition()">{{
+            moreMessage }}</p>
+
+        <div *ngIf="haveSynonyms">
+            <div id="synomnTile" class="synomn-title">Synonyms</div>
+
+            <div class="synomns">
+                <p>{{ synonyms }}</p>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

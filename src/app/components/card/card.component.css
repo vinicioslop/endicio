@@ -1,0 +1,44 @@
+.card {
+    margin-bottom: 20px;
+
+    width: 500px;
+}
+
+.header-card {
+    margin-bottom: 5px;
+}
+
+.header-card .header-title {
+    text-transform: capitalize;
+}
+
+.definition {
+    margin-bottom: 5px;
+}
+
+.synomn-title {
+    margin-top: 15px;
+    margin-bottom: 10px;
+
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.synomns {
+    display: flex;
+    flex-direction: row;
+}
+
+.more {
+    margin-top: 10px;
+
+    color: blue;
+}
+
+.more:hover {
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}

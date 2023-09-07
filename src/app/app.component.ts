@@ -56,12 +56,13 @@ export class AppComponent {
       }
     ]
   };
-  audio: string = "";
+  audioSrc: string = "";
+  phonetic: string = "";
 
   constructor() { }
 
   async searchWord(word: string) {
-    let apiReponseBox = document.getElementById("apiResponseBox");
+    const apiReponseBox = document.getElementById("apiResponseBox");
 
     const response = await fetch(this.apiUrl + word, {
       method: "GET",
@@ -77,7 +78,8 @@ export class AppComponent {
 
     this.wordResponseData.phonetics.map((phonetic) => {
       if (phonetic.audio) {
-        this.audio = phonetic.audio;
+        this.audioSrc = phonetic.audio;
+        this.phonetic = phonetic.text;
       }
     });
 
