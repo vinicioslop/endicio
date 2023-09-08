@@ -3,8 +3,8 @@
         <h3>{{ wordResponseData.word }}</h3>
         <p>Phonetic: {{ phonetic }}</p>
 
-        <audio controls>
-            <source [src]="audioSrc" />
+        <audio *ngIf="audioSrc != ''" controls="controls">
+            <source [src]="audioSrc" type="audio/mpeg" />
         </audio>
     </div>
 

@@ -10,11 +10,10 @@ export class CardComponent implements OnInit {
 
   moreDefinitions: boolean = false;
   haveMoreDefinitions: boolean = true;
+  moreMessage: string = "See more...";
 
   haveSynonyms: boolean = false;
   synonyms: string = "";
-
-  moreMessage: string = "See more...";
 
   ngOnInit(): void {
     this.haveMoreDefinitions = this.meaning.definitions.length < 3 ? false : true;

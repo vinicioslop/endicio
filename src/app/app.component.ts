@@ -73,7 +73,6 @@ export class AppComponent {
     });
 
     const dados = await response.json();
-
     this.wordResponseData = dados[0];
 
     this.wordResponseData.phonetics.map((phonetic) => {
@@ -83,9 +82,8 @@ export class AppComponent {
       }
     });
 
-    if(apiReponseBox) {
+    if (apiReponseBox) {
       apiReponseBox.className = "api-response show";
-      console.log(this.wordResponseData);
     }
   }
 }
