@@ -1,14 +1,5 @@
 .navbar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    margin-bottom: 20px;
-
-    padding-left: var(--side-spacing);
-    padding-bottom: var(--side-spacing);
-
-    height: 80px;
+    height: 60px;
     width: 100%;
 }
 
@@ -22,62 +13,18 @@
     width: 100%;
 }
 
-.word-search {
+.blank_site {
     display: flex;
-    flex-direction: row;
     align-items: center;
+    justify-content: center;
 
-    width: 90%;
-}
-
-.type-word {
-    margin-right: 30px;
-
-    font-size: 22px;
-}
-
-/* CODE FOR INPUT START */
-.word-input-box {
-    --width-of-input: 300px;
-    --border-height: 1px;
-    --border-before-color: rgba(221, 221, 221, 0.13);
-    --border-after-color: #000000;
-    --input-hovered-color: #0000001f;
-    position: relative;
-    width: var(--width-of-input);
-}
-
-.input {
-    color: #000;
-    font-size: 16px;
-    background-color: transparent;
-    width: 100%;
-    box-sizing: border-box;
-    padding-inline: 0.5em;
-    padding-block: 0.7em;
-    border: none;
-    border-bottom: var(--border-height) solid var(--border-before-color);
-}
-
-.input-border {
-    position: absolute;
-    background: var(--border-after-color);
-    width: 0%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    transition: 0.3s;
-}
-
-input:hover {
-    background: var(--input-hovered-color);
-}
-
-input:focus {
-    outline: none;
-}
-
-input:focus~.input-border {
+    height: 80vh;
     width: 100%;
 }
-/* CODE FOR INPUT FINAL */
+
+.blank_site .text {
+    width: 600px;
+
+    font-size: 30px;
+    text-align: center;
+}

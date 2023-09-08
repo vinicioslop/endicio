@@ -1,20 +1,12 @@
-<div class="navbar" role="banner">
-  <h1>Endicio</h1>
-</div>
+<app-navbar></app-navbar>
 
 <div class="content" role="main">
-  <div class="word-search">
-    <h2 class="type-word">Type a word to search</h2>
-
-    <div class="word-input-box">
-      <input #wordEntered class="input" placeholder="Type your text" required=""
-        type="text" (keyup.enter)="searchWord(wordEntered.value)">
-      <span class="input-border"></span>
-    </div>
-  </div>
-
-  <app-api-response [wordResponseData]="wordResponseData" [phonetic]="phonetic"
+  <app-api-response *ngIf="word" [wordResponseData]="wordResponseData" [phonetic]="phonetic"
     [audioSrc]="audioSrc"></app-api-response>
+
+  <div *ngIf="!word" class="blank_site">
+    <p class="text">To see some information about some word just insert on the bar above. 😎</p>
+  </div>
 </div>
 
 <router-outlet></router-outlet>

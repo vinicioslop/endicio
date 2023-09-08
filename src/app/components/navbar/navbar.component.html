@@ -1,0 +1,16 @@
+<mat-toolbar class="navbar" role="banner">
+    <h1>Endicio</h1>
+
+    <span class="example-spacer"></span>
+
+    <div class="word-search">
+        <h3 class="type-word">Enter a word to search:</h3>
+
+        <div class="word-input-box">
+            <input #wordEntered class="input" placeholder="Type your text"
+                required="" type="text"
+                (keyup.enter)="setWord(wordEntered.value)">
+            <span class="input-border"></span>
+        </div>
+    </div>
+</mat-toolbar>

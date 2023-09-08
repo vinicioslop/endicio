@@ -1,0 +1,70 @@
+.navbar {
+    margin-bottom: 20px;
+}
+
+.navbar h1 {
+    font-size: 24px;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.word-search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.type-word {
+    margin-right: 30px;
+
+    font-size: 18px;
+}
+
+/* CODE FOR INPUT START */
+.word-input-box {
+    --width-of-input: 300px;
+    --border-height: 1px;
+    --border-before-color: rgba(221, 221, 221, 0.13);
+    --border-after-color: #000000;
+    --input-hovered-color: #0000001f;
+    position: relative;
+    width: var(--width-of-input);
+}
+
+.input {
+    color: #000;
+    font-size: 16px;
+    background-color: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    padding-inline: 0.5em;
+    padding-block: 0.7em;
+    border: none;
+    border-bottom: var(--border-height) solid var(--border-before-color);
+}
+
+.input-border {
+    position: absolute;
+    background: var(--border-after-color);
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s;
+}
+
+input:hover {
+    background: var(--input-hovered-color);
+}
+
+input:focus {
+    outline: none;
+}
+
+input:focus~.input-border {
+    width: 100%;
+}
+
+/* CODE FOR INPUT FINAL */

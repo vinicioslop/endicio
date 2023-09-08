@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { WordDataService } from "./services/worddata.service";
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -58,13 +60,19 @@ export class AppComponent {
   };
   audioSrc: string = "";
   phonetic: string = "";
+  word: any;
 
-  constructor() { }
+  constructor(private wordDataService: WordDataService) {
+    this.wordDataService.word.subscribe((newWord) => {
+      this.word = newWord;
+      this.searchWord();
+    });
+  }
 
-  async searchWord(word: string) {
+  async searchWord() {
     const apiReponseBox = document.getElementById("apiResponseBox");
 
-    const response = await fetch(this.apiUrl + word, {
+    const response = await fetch(this.apiUrl + this.word, {
       method: "GET",
       headers: {
         Accept: "application/json",
